@@ -1,0 +1,3 @@
+0|Student A
+1|Student B
+2|Student C

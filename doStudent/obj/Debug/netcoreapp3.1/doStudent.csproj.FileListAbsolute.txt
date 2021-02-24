@@ -1,0 +1,14 @@
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\bin\Debug\netcoreapp3.1\doStudent.exe
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\bin\Debug\netcoreapp3.1\doStudent.deps.json
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\bin\Debug\netcoreapp3.1\doStudent.runtimeconfig.json
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\bin\Debug\netcoreapp3.1\doStudent.runtimeconfig.dev.json
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\bin\Debug\netcoreapp3.1\doStudent.dll
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\bin\Debug\netcoreapp3.1\doStudent.pdb
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\obj\Debug\netcoreapp3.1\doStudent.AssemblyInfoInputs.cache
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\obj\Debug\netcoreapp3.1\doStudent.AssemblyInfo.cs
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\obj\Debug\netcoreapp3.1\doStudent.csproj.CoreCompileInputs.cache
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\obj\Debug\netcoreapp3.1\doStudent.dll
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\obj\Debug\netcoreapp3.1\doStudent.pdb
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\obj\Debug\netcoreapp3.1\doStudent.genruntimeconfig.cache
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\obj\Debug\netcoreapp3.1\doStudent.csprojAssemblyReference.cache
+C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\bin\Debug\netcoreapp3.1\studentfile.txt
