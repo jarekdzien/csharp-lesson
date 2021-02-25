@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "doStudent": {
+      "commandName": "Project"
+    }
+  }
+}

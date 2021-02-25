@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 
+
 namespace doStudent
 {
     class Program
@@ -11,6 +12,7 @@ namespace doStudent
             // why do i need that?
 
             //string id = string.Empty;
+
             //if (args.Length == 1)
             //{
             //    id = args[0];
@@ -19,14 +21,26 @@ namespace doStudent
             
             listStudentFile();
 
-            while (true) {
-                
+            var xxx = true;
 
-                Console.Write("Choose student id: ");
+            while (xxx == true) {
+                
+                Console.Write("Choose student id (enter q to quit): ");
+                
                 var id = Console.ReadLine();
 
-                doStudentFile(id);
+
+                if ( id == "q")
+                {
+
+                    xxx = false;
+                }
+                else  {
+                    doStudentFile(id);
+
+                }
             }
+
         }
 
         public static void listStudentFile()
@@ -48,14 +62,12 @@ namespace doStudent
 
             Console.WriteLine("Date: "+v);
 
-
-
             //var text = "COS nowego\n";
             //File.WriteAllText(FileName, text);
 
             string[] liness = { "4|Name4|Surname4", "5|Name5|Surname5", "6|Name6|Surname6" };
-            //File.AppendAllLines(@"C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\"+FileName, liness);
-            //File.AppendAllLines(FileName, liness);
+        
+            //File.AppendAllLines(    //File.AppendAllLines(@"C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\"+FileName, liness);FileName, liness);
 
 
             //for (int i = 0; i < lines.Length; i++)
@@ -67,7 +79,7 @@ namespace doStudent
 
             foreach (var line in lines)
             {
-                Console.WriteLine(line);
+               Console.WriteLine(line);
             }
         }
 
@@ -84,11 +96,11 @@ namespace doStudent
             {
                 try
                 {
-x                    var splits = student.Split("|");
+                    var splits = student.Split("|");
                     var studentId = splits[0];
                     var studentName = splits[1];
                     var studentSurName = splits[2];
-
+                        
                     if (studentId.Equals(id))
                     {
                         foundStudent = true;
@@ -111,4 +123,3 @@ x                    var splits = student.Split("|");
         }
     }
 }
-
