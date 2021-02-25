@@ -8,28 +8,26 @@ namespace doStudent
         static void Main(string[] args)
         {
 
-            string id = string.Empty;
+            // why do i need that?
 
-
-
-            if (args.Length == 1)
-            {
-                
-                id = args[0];
-
-            }
+            //string id = string.Empty;
+            //if (args.Length == 1)
+            //{
+            //    id = args[0];
+            //}
 
             
-
             listStudentFile();
 
-            while (true) { 
+            while (true) {
+                
 
-                doStudentFile();
+                Console.Write("Choose student id: ");
+                var id = Console.ReadLine();
+
+                doStudentFile(id);
             }
-
         }
-
 
         public static void listStudentFile()
         {
@@ -37,13 +35,28 @@ namespace doStudent
             //string dir = Directory.GetCurrentDirectory();
             //Console.WriteLine(dir);
 
-      
+            
             var FileName = "studentfile.txt";
 
             Console.WriteLine($"Listing the student file: {FileName}.");
 
 
             var lines = File.ReadAllLines(FileName);
+
+            string v = DateTime.Now.Date.ToShortDateString();
+
+
+            Console.WriteLine("Date: "+v);
+
+
+
+            //var text = "COS nowego\n";
+            //File.WriteAllText(FileName, text);
+
+            string[] liness = { "4|Name4|Surname4", "5|Name5|Surname5", "6|Name6|Surname6" };
+            //File.AppendAllLines(@"C:\Users\Jarek_Dzien\source\repos\doStudent\doStudent\"+FileName, liness);
+            //File.AppendAllLines(FileName, liness);
+
 
             //for (int i = 0; i < lines.Length; i++)
             //{
@@ -52,51 +65,49 @@ namespace doStudent
 
             //}
 
-    
             foreach (var line in lines)
             {
                 Console.WriteLine(line);
             }
         }
 
-        public static void doStudentFile()
+        public static void doStudentFile(string id)
         {
 
-
-            Console.Write("Choose student id: ");
-
-            var id = Console.ReadLine();
-
+            Console.Clear();
+            
             var FileName = "studentfile.txt";
-
             var StudentFile = File.ReadAllLines(FileName);
             var foundStudent = false;
 
             foreach (var student in StudentFile)
             {
-                var splits = student.Split("|");
-                var studentId = splits[0];
-                var studentName = splits[1];
-                var studentSurName = splits[2];
-
-                if (studentId.Equals(id))
+                try
                 {
+x                    var splits = student.Split("|");
+                    var studentId = splits[0];
+                    var studentName = splits[1];
+                    var studentSurName = splits[2];
 
-                    foundStudent = true;
+                    if (studentId.Equals(id))
+                    {
+                        foundStudent = true;
 
-                    Console.WriteLine($"student with {id} was found.");
-                    Console.WriteLine(studentId + " " + studentName + " " + studentSurName);
-                    
+                        Console.WriteLine($"student with {id} was found.");
+                        Console.WriteLine(studentId + " " + studentName + " " + studentSurName);
+                    }
                 }
-
+                catch (Exception e)
+                {
+                    Console.Write("There's some data error -> ");
+                    Console.WriteLine(e.Message);
+                }
             }
 
             if (!foundStudent)
             {
-
                 Console.WriteLine($"student with {id} was not found.");
             }
-            
         }
     }
 }
